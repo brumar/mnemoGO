@@ -32,7 +32,7 @@ for d in listOfDirectories:
             if(sgfstring!=False):
                 indexB=sgfstring.find(";B[")
                 indexW=sgfstring.find(";W[")
-                if (((indexB)>(indexW))|((indexB==-1)&(indexW!=-1))):
+                if (((indexW!=-1)&((indexB)>(indexW)))|((indexB==-1)&(indexW!=-1))):
                     print(filepath)
                     sgfstring=sgfstring.replace("B[","xxx[")
                     sgfstring=sgfstring.replace("W[","B[")
